@@ -206,9 +206,9 @@ int main() {
     for (size_t i = 0; i < y_test.size(); ++i) {
         y_test_2d[i][0] = y_test[i];
     }
-    float lambda = 0.0001;
+    float lambda = 0.00001;
     float alpha = 0.01;
-    vector<int> neuronLayer = { static_cast<int>(norm_x_train[0].size()), 10, 5, 10, 1 }; // Update the neuron layers based on your dataset
+    vector<int> neuronLayer = { static_cast<int>(norm_x_train[0].size()), 20, 10, 20, 1 }; // Update the neuron layers based on your dataset
     int max_iterations = 1000;
     ArtificialNeuralNetwork ann(lambda, alpha, neuronLayer, max_iterations);
     vector<vector<float>> y_pred_train_2d = ann.backProp(norm_x_train, y_train_2d);
